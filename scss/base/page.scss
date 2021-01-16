@@ -1,0 +1,52 @@
+.page_header {
+    margin-bottom: 80px;
+
+    .rb-container {
+        p.breadcrumb {
+            margin-bottom: 0;
+            font-size: .9rem;
+
+            span.chevron {
+                font-weight: 700;
+                padding: 0 8px;
+            }
+        }
+
+        h1 {
+            position: relative;
+            text-align: left;
+
+            .headerbuttons {
+                position: absolute;
+                right: 0;
+                bottom: 5px;
+
+                a.button {
+                    margin-left: 27px;
+                }
+            }
+        }
+
+        h2.subtitle {
+            margin-top: 3px;
+            text-align: left;
+            font-size: 1.3rem;
+            margin-bottom: 0;
+        }
+
+        .title_details {
+            margin-top: 30px;
+
+            p {
+                font-size: .9rem;
+                color: #999;
+                margin: 0;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 40px;
+    }
+}

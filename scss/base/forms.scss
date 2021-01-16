@@ -1,0 +1,89 @@
+select {
+    padding: 5px;
+    color: #333;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    @mixin button;
+
+    &.mini-submit {
+        border-radius: 50px;
+        padding: 5px;
+        margin-left: 5px;
+    }
+
+    &.text-submit {
+        background-color: unset;
+        color: blue;
+        border: 0;
+        padding: 0;
+        font-weight: 600;
+        padding-left: 20px;
+        border: 1px solid blue;
+        border-radius: 100px;
+        padding: 5px;
+        margin-left: 5px;
+    }
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+
+    &.tablehack {
+        margin-left: -37px; /* a dirty little hack */
+    }
+}
+
+p.label {
+    margin-bottom: 5px;
+    line-height: 1;
+    color: #333;
+    font-weight: 400;
+
+    span.required_field {
+        color: #900;
+        margin-left: 5px;
+    }
+
+    span.field_val_fail {
+        color: #900;
+        font-size: .8rem;
+        margin-left: 20px;
+        font-weight: 700;
+    }
+}
+
+form.primary-form {
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        line-height: 2;
+        width: 450px;
+        border-radius: 5px;
+        border: 1px solid #999;
+        padding-left: 5px;
+        margin-bottom: 25px;
+    }
+
+    textarea {
+        height: 200px;
+        line-height: 1.5;
+    }
+
+    .fields {
+        display: flex;
+        .col-1,
+        .col-2 {
+            width: 50%;
+        }
+    }
+}
+
+input.f_val {
+    border-color: #900 !important;
+}
+
+input.tiny {
+    width: 60px;
+}

@@ -1,0 +1,190 @@
+body {
+    font-family: 'Montserrat';
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2.6rem;
+    margin: 0;
+    font-weight: 400;
+    color: #333;
+
+    @media only screen and (max-width: 767px) {
+        font-size: 1.9rem;
+
+        &.mobile-marbot {
+            margin-bottom: 14px;
+        }
+    }
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: left;
+    margin: 0;
+    color: #444;
+
+    @media only screen and (max-width: 767px) {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+h3 {
+    color: #555;
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+}
+
+h6 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+    margin-top: 35px;
+    font-weight: 400;
+}
+
+p {
+    line-height: 250%;
+    color: #666;
+    margin: 0 0 2rem 0;
+
+    &.header-label {
+        margin-bottom: 3px;
+        color: #333;
+        font-weight: 500;
+        line-height: 170%;
+    }
+
+    &.back-to {
+        margin-top: 3rem;
+        margin-bottom: 4px;
+    }
+
+    @media only screen and (max-width:767px) {
+        font-size: .9rem;
+    }
+}
+
+
+ul {
+    line-height: 220%;
+    color: #666;
+}
+
+ul.graphic {
+    padding-left: 0;
+
+    li {
+        margin: 0;
+        padding: 15px 0 15px 55px;
+        list-style: none;
+        background-image: url("images/test-card.jpg");
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 30px;
+    }
+}
+
+p.button-wrap {
+    margin: 0;
+    line-height: 100%;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--link-hover-color);
+    }
+
+    &.link-bold {
+        color: var(--bold-link-color)
+    }
+}
+
+@define-mixin button {
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 0;
+    background-color: var(--action-color-1);
+    color: #e0e0e0;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: .8rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.1s, background-color 0.1s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--action-color-2);
+        color: #eee;
+        transition: color 0.1s, background-color 0.1s;
+    }
+
+    &.tabletop {
+        transform: translateY(-5px);
+        margin-right: 10px;
+    }
+}
+
+@define-mixin button-ghost {
+    background: unset;
+    font-weight: 400;
+    color: #ccc;
+    border: 1px solid #aaa;
+    
+    &:hover {
+        color: #333;
+        border: 1px solid #ccc;
+        background-color: #ccc;
+    }
+}
+
+a.button {
+    @mixin button;
+
+    &.ghost {
+        @mixin button-ghost;
+    }
+}
+
+@define-mixin text-link {
+    font-weight: 700;
+    font-size: 1rem;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: "\f105";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        font-size: 14px;
+        top: 2px;
+        right: -14px;
+        transition: all 100ms ease-out;
+    }
+
+    &:hover:after {
+        right: -17px;
+    }
+}
+
+a.text-link {
+    @mixin text-link;
+}
+
+hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    border-top: 1px solid #999;
+    border-bottom: 0;
+}
+
+span.red {
+    color: #900;
+}

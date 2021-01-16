@@ -1,0 +1,130 @@
+.header {
+    margin-bottom: 70px;
+}
+
+.footer {
+    background-color: var(--footer-color);
+    height: 30px;
+    padding: 0;
+    margin-top: 0;
+
+    @media only screen and (max-width: 767px) {
+        background-color: #c00;
+    }
+
+    p {
+        line-height: 200%;
+        font-size: .9rem;
+        color: #aaa;
+    }
+
+    .top-row {
+        display: flex;
+        
+        .section {
+            width: 25%;
+            display: flex;
+            align-items: center;
+            height: 100%;
+
+            .inner {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                justify-content: center;
+
+                i {
+                    font-size: 2.2rem;
+                    margin-right: 15px;
+                    color: #ddd;
+                }
+
+                p {
+                    line-height: 120%;
+                    margin: 0;
+
+                    &.title {
+                        color: #ddd;
+                        font-weight: 600;
+                    }
+
+                    &.subtitle {
+                        color: #aaa;
+                        font-size: .9rem;
+                    }
+                }
+            }
+
+            &:not(:last-child) .inner {
+                border-right: 1px solid #ccc;
+            }
+        }
+    }
+
+    hr {
+        border-top: 1px solid #888;
+        border-bottom: 0;
+        margin: 50px auto;
+    }
+
+    .bottom-row {
+        display: flex;
+        justify-content: space-around;
+
+        .section {
+            width: 24%;
+
+            h6 {
+                font-size: 1.2rem;
+                color: #ddd;
+                margin-top: 0;
+                margin-bottom: 2rem;
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                font-size: .9rem;
+
+                li {
+
+                    color: #aaa;
+
+                    span.right {
+                        float: right;
+                    }
+
+                    a {
+                        color: #aaa;
+                        position: relative;
+                        padding-left: 20px;
+
+                        &:hover {
+                            color: #ddd;
+
+                            &:before {
+                                color: #ddd;
+                            }
+                        }
+
+                        &:before {
+                            position: absolute;
+                            left: 5px;
+                            content: "\f105";
+                            font-family: 'Font Awesome 5 Free';
+                            font-weight: 900;
+                            color: #888;
+                        }
+                    }
+                }
+            }
+
+            &.opening-hours {
+                li:not(:last-child) {
+                    border-bottom: 1px solid #999;
+                }
+            }
+        }
+    }
+}

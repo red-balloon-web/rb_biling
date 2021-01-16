@@ -1,0 +1,42 @@
+.wpcf7-form {
+
+    p {
+        color: #999;
+    }
+    input:not([type=submit]), textarea {
+        width: 100%;
+        line-height: 200%;
+        margin-bottom: 1rem;
+        color: #555;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 16px;
+    }
+
+    textarea {
+        border: 1px solid #ddd;
+    }
+    input[type=submit] {
+        padding: 10px 20px;
+        border: 1px solid white;
+        border-radius: 40px;
+        background-color: #d14f41;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: .8rem;
+        text-decoration: none;
+        display: inline-block;
+        font-family: 'Open Sans';
+        transition: color 0.3s, background-color 0.3s, border 0.3s;
+
+        &:hover {
+            background-color: white;
+            color: #d14f41;
+            border: 1px solid #d14f41;
+            transition: color 0.3s, background-color 0.3s, border 0.3s;
+            cursor: pointer;
+        }
+
+    }
+}

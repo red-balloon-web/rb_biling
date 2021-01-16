@@ -1,0 +1,153 @@
+.invoice-report {
+    .rb-container {
+        .logo-address {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 80px;
+
+            .logo {
+                font-size: 40px;
+                color: #aaa;
+                font-weight: 300;
+                .red {
+                    color: #900;
+                    font-weight: 400;
+                }
+                .url {
+                    font-size: 1rem;
+                    color: #666;
+                    display: block;
+                    text-align: center;
+                }
+            }
+
+            .address {
+                text-align: right;
+                color: #666;
+                line-height: 1.5;
+            }
+        }
+
+        .invoice-header {
+            margin-bottom: 60px;
+
+            h2 {
+                font-size: 25px;
+                font-weight: 400;
+                margin-bottom: 5px;
+                text-align: center;
+                line-height: 1;
+                color: #333;
+            }
+
+            p {
+                margin-bottom: 0;
+                color: #999;
+                font-style: italic;
+                text-align: center;
+                line-height: 1;
+            }
+        }
+
+        .report-summary {
+            margin-bottom: 50px;
+            p {
+                line-height: 1.5;
+            }
+        }
+
+        .report-body {
+            .report-body__header {
+                margin-bottom: 60px;
+                h3 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                }
+                p {
+                    font-size: .9rem;
+                    color: #999;
+                    line-height: 1;
+                    margin-bottom: 0;
+                }
+            }
+
+            &__client-notes,
+            &__tech-notes {
+                margin-bottom: 60px;
+                p {
+                    line-height: 1.5;
+
+                    &.title {
+                        font-weight: 700;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+
+        .invoice-item {
+            margin-bottom: 40px;
+
+            p {
+                line-height: 1.5;
+                margin-bottom: 5px;
+            }
+
+            .priceline {
+                display: flex;
+                p {
+                    margin-bottom: 0;
+                    line-height: 1;
+                }
+                .underline {
+                    flex-grow: 100;
+                    border-bottom: 1px solid #999;
+                    margin: 0 10px;
+                }
+            }
+
+            &.total {
+                margin-top: 140px;
+                margin-bottom: 18px;
+
+                .priceline {
+                    border-bottom: 1px solid #666;
+                    padding-bottom: 2px;
+                    justify-content: space-between;
+
+                    p {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        .invoice-terms {
+            margin-bottom: 60px;
+            p {
+                line-height: 1;
+                margin-bottom: 5px;
+            }
+        }
+
+        .invoice-thankyou {
+            width: 600px;
+            margin: 100px auto 60px auto;
+            p {
+                text-align: center;
+                font-style: italic;
+                line-height: 1.5;
+                margin-bottom: 5px;
+                color: #999;
+            }
+        }
+    }
+}
+
+.previous-next {
+    .rb-container {
+        display: flex;
+        justify-content: space-between;
+    }
+}

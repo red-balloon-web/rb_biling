@@ -1,0 +1,80 @@
+/* ALL CLIENTS PAGE */
+
+.clients-filter-box {
+    margin-bottom: 50px;
+    .rb-container {
+        form {
+            display: flex;
+            align-items: flex-end;
+
+            div {
+                margin-right: 24px;
+            }
+        }
+    }
+}
+
+/* SINGLE CLIENT PAGE */
+
+.client-info {
+    margin-bottom: 50px;
+
+    .rb-container {
+        display: flex;
+
+        .details {
+            width: 50%;
+            
+            table {
+                color: #666;
+                line-height: 150%;
+
+                tr {
+                    td {
+                        padding-bottom: 20px;
+
+                        &:first-child {
+                            padding-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .table {
+            width: 50%;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+
+        .rb-container {
+            .details {
+                display: none;
+            }
+            .table {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.client_ii_table {
+    margin-bottom: 80px;
+}
+
+.client-invoice-table {
+    margin-bottom: 80px;
+
+    h2 {
+        margin-bottom: 0;
+    }
+}
+
+.client-invoice-items-table {
+    margin-bottom: 50px;
+
+    h2 {
+        margin-bottom: 0;
+    }
+}

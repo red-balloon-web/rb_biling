@@ -1,0 +1,41 @@
+.ii_table {
+    margin-bottom: 50px;
+}
+
+.raise-invoice-box {
+
+    .rb-container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items:flex-end;
+        div {
+            margin-left: 10px;
+
+            &.days {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                p {
+                    margin: 0;
+                    line-height: 1;
+                    margin-right: 35px;
+                }
+            }
+
+            &.terms {
+                input {
+                    text-align: center;
+                }
+            }
+        }
+        input[type="text"],
+        input[type="date"] {
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            line-height: 2;
+            color: #333;
+        }
+    }
+}

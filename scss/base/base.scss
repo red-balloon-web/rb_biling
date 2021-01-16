@@ -1,0 +1,70 @@
+#rb-page {
+    min-height: calc(100vh - 30px);
+    padding-bottom: 100px;
+
+    @media only screen and (max-width: 767px) {
+        padding-bottom: 40px;
+    }
+}
+
+.pageheader {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 70px;
+
+    .rb-container {
+        
+        h1 {
+            position: relative;
+            text-align: left;
+
+            .headerbuttons {
+                position: absolute;
+                right: 0;
+                bottom: 5px;
+
+                a.button {
+                    margin-left: 27px;
+                }
+            }
+        }
+
+        h2.subtitle {
+            margin-bottom: 25px;
+        }
+
+        p {
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+    }
+}
+
+.response-area {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 70px;
+
+    .rb-container {
+        .response {
+            width: 800px;
+            background-color: #78dc78;
+            padding: 15px 10px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.desktop {
+    @media only screen and (max-width: 767px) {
+        display: none !important;
+    }
+}
+
+.mobile {
+    @media only screen and (min-width: 768px) {
+        display: none !important;
+    }
+}

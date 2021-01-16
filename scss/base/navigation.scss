@@ -1,0 +1,184 @@
+
+/* MODAL MENU */
+#rb-modal-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 100px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .5s, opacity .3s;
+    z-index: 2000;
+
+    &.open {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity .3s;
+    }
+
+    &__close-button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 20px;
+        color: #F00;
+        font-size: 30px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        margin-top: 1rem;
+        list-style-type: none;
+        width: 100%;
+
+        li {
+            padding: 1em 2em;
+            width: 100%;
+            text-align: center;
+
+            a {
+                color: #900;
+            }
+
+            &:not(:last-child) {
+                /*border-bottom: 1px solid #999;*/
+            }
+
+            &:nth-child(odd) {
+                /*background-color: #eee;*/
+            }
+
+            ul {
+                li {
+                    background-color: unset;
+                    border-bottom: 0 !important;
+                }
+            }
+
+            /* add little arrows before opening menu items */
+            a.sub-link::before {
+                content: '\25be';
+                margin-right: 10px;
+            }
+
+            a.sub-link.closed-link::before {
+                content: '\25b8';
+            }
+        }
+    }
+}
+
+/* desktop menu */
+.rb-desktop-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .menu {
+        margin-bottom: 21px;
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+
+            > li {
+                position: relative;
+                padding: 0;
+
+                &:not(:first-child) {
+                    a {
+                        padding: 0 20px;
+                    }
+                }
+
+                &:first-child {
+                    a {
+                        padding: 0 20px 0 0;
+                    }
+                }
+
+                a {
+                    color: #c5c5c5;
+                    text-decoration: none;
+                    font-family: 'Montserrat';
+                    text-transform: capitalize;
+                    font-size: .95rem;
+                    font-weight: 300;
+                    display: block;
+                    line-height: 110%;
+                    
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+
+                &.current-menu-item a {
+                    color: white;
+                }
+
+                &.menu-item-has-children {
+                    &:hover {
+                        > a {
+                            color: var(--action-color-2);
+                        }
+                    }
+                }
+
+                > ul {
+                    &.sub-menu {
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+                        top: 53px;
+                        display: none;
+                        padding-top: 34px;
+                        width: 200%;
+                        right: -50%;
+                        transition: padding-top .5s;
+
+                        > li {
+                            border-right: 0;
+                            background-color: var(--highlight-color-1);
+                            text-align: center;
+                            padding: 0;
+                            transition: background-color .5s;
+
+                            &:last-child {
+                                border-radius: 0 0 20px 20px;
+                            }
+
+                            a {
+                                display: block;
+                                padding: 19px 0;
+                                border-radius: 20px;
+                                border-right: 0;
+
+                                &:hover {
+                                    background-color: white;
+                                    color: var(--highlight-color-1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
